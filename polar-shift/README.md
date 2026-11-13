@@ -1,4 +1,4 @@
-# POLAR SHIFT — a Scratch game
+# POLAR SHIFT 3D — a Scratch game
 
 > *Opposites attract. Opposites kill.*
 
@@ -19,8 +19,21 @@ You can't chase down the enemies you're allowed to eat, because they flee. So yo
 Flipping costs energy (the bar at the bottom holds 3 flips). Absorbing enemies refills it, so a good chain keeps you going and spamming flips leaves you defenseless.
 
 ## Controls
-- **Arrows / WASD**: drift (with inertia)
-- **Space / Click**: flip polarity
+| | Keyboard | Touch / mouse |
+|---|---|---|
+| Move | Arrows / WASD | drag the on-screen stick (bottom-left) |
+| Flip | Space | tap the FLIP button, or tap/click anywhere else |
+| Start / retry | Space | tap |
+
+The FLIP button shows the color you'll flip *to*, and reads **LOW** when you don't have enough energy.
+Scratch only reads one touch at a time, so on a phone you let go of the stick to flip.
+
+## 3D
+The game runs on a 3D world plane, and everything is projected through a perspective camera:
+- The arena backdrop is pre-rendered with the same camera, so the floor grid, glowing walls and corner pylons line up exactly with the sprites.
+- Enemies are flat-shaded 3D meshes (octahedrons, hex prisms, darts), each rendered from 8 angles so they spin or turn to face where they're heading.
+- Objects hover and bob, cast shadows, and are drawn in front of or behind each other by depth. Your core lights up the floor in its color.
+- Enemies drop in from the sky, and sparks arc up and bounce off the floor.
 
 ## Features
 - Endless waves that get faster and denser
@@ -46,4 +59,5 @@ python3 build.py      # writes PolarShift.sb3
 
 - `build.py`: the game logic, written with a small Python DSL
 - `dsl.py`: compiles that DSL into Scratch 3 blocks
-- `assets.py`: neon SVG art and synthesized WAV audio
+- `art3d.py`: the camera projection, a mesh-to-SVG renderer, the 3D arena and the touch controls
+- `assets.py`: 2D neon art (HUD digits, text cards) and synthesized WAV audio

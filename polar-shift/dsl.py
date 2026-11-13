@@ -317,3 +317,11 @@ def pen_param(p, v):
     return Blk("pen_setPenColorParamTo",
                inputs={"COLOR_PARAM": ("menu", ("pen_menu_colorParam", "colorParam", p, p)),
                        "VALUE": ("num", v)})
+
+
+# ---------------------------------------------------------------- added for 3D
+def back(): return Blk("looks_gotofrontback", fields={"FRONT_BACK": "back"})
+def fwd(n): return Blk("looks_goforwardbackwardlayers", inputs={"NUM": ("int", n)}, fields={"FORWARD_BACKWARD": "forward"})
+def round_(x): return Blk("operator_round", inputs={"NUM": ("num", x)})
+def mousex(): return Blk("sensing_mousex")
+def mousey(): return Blk("sensing_mousey")
