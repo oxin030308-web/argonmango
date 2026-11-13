@@ -16,7 +16,7 @@ The new mechanic is that magnetism moves everything:
 
 You can't chase down the enemies you're allowed to eat, because they flee. So you let the killers rush in and **flip your polarity at the last second**. Their own momentum carries them into you and you absorb them. Do it within about 0.4 s of flipping and it's a **CLUTCH** (double points, extra energy).
 
-Flipping costs energy (the bar at the bottom holds 3 flips). Absorbing enemies refills it, so a good chain keeps you going and spamming flips leaves you defenseless.
+Flipping costs energy (the bar at the top holds 3 flips). Absorbing enemies refills it, so a good chain keeps you going and spamming flips leaves you defenseless.
 
 ## Controls
 | | Keyboard | Touch / mouse |
